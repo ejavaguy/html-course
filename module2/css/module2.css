@@ -1,0 +1,42 @@
+
+* {
+  box-sizing: border-box;
+}
+
+section {
+  float: left;
+  position: relative;
+}
+
+#title {
+  background-color: red;
+  color: green;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+/*** Desktop **/
+@media (min-width: 992px) {
+  .col-lg-4 {
+    width: 33%;
+  }
+}
+
+/*** Tablet ***/
+@media (min-width: 768px) and (max-width: 991px) {
+  .col-md-6 {
+    width: 50%;
+  }
+  .col-md-12 {
+    width: 100%;
+  }
+
+}
+
+/*** Mobile ***/
+@media (max-width: 767px) {
+  .col-sm-12 {
+    width: 100%;
+  }
+}
