@@ -23,9 +23,6 @@ section {
   margin-top: 10px;
   margin-bottom: 10px;
 }
-/*
-  margin-left: auto;
-*/
 
 section > h2 {
   font-size: 1.25em;
@@ -37,9 +34,7 @@ section > h2 {
   width: 100px;
   text-align: center;
 }
-/*
-  padding-left: 5px;
-*/
+
 #t1 {
   background-color: #808080;  
 }
@@ -57,10 +52,6 @@ p {
   margin-left: 20px;
   width: 95%;
 }
-/*
-  margin-right: 5px;
-  margin-left: 5px;
-*/
 
 /*** Desktop **/
 @media (min-width: 992px) {
