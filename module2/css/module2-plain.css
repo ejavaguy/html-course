@@ -1,0 +1,102 @@
+
+* {
+  box-sizing: border-box; /* makes specs relative to outer border */
+  font-family: Helvetica
+}
+
+h1 {
+  text-align: center; /* center text on page */
+  font-size: 1.75em;
+}
+
+.area {
+  /* debug - show area border
+  border: 1px dotted black;
+  */
+}
+
+section {
+  border: 1px solid black;
+  /* margins provide spacing between the border of this section
+     and the border of the surrounding area */
+  margin-left: 10px;   /* left spacing between section and div.area */
+  margin-right: 10px;  /* right spacing between section and div.area */
+  margin-top: 10px;    /* top spacing between top element and div.area */
+  margin-bottom: 10px; /* bottom spacing after bottom element and div.area */
+  background: #E9EAE9;
+  position: relative; /* required to host position absolute child titles */  
+}
+
+/* h2 tags that are direct decendants of section tags */
+section > h2 {
+  border: 1px solid black; /* draw line around title box */
+  text-align: center; /* center text within box */
+  font-size: 1.25em;
+  width: 125px;       /* expand the title box beyond the characters */
+  position: absolute; 
+  right: 0; /* put against right of relative container */
+  margin-top: 0px; /* remove inherited margin - makes alight with section border */
+}
+
+/* titles for each section required to have separate coloring */
+#t1 { /* section 1 title */
+  background-color: #808080;  
+}
+#t2 { /* section 2 title */
+  background-color: #A52A2A;
+  color: #FFFFFF; /* text coloring */
+}
+#t3 { /* section 3 title */
+  background-color: #D2B48C;
+}
+
+p {
+  font-size: 1em;
+  margin-top: 30px;  /* push down beyond title box */
+  width: 95%;         /* causes line to take % of total space */
+  margin-left: auto;  /* right/left auto centers usable text block within % */
+  margin-right: auto;
+}
+
+.row {
+  width: 100%;
+}
+
+/*** Desktop **/
+@media (min-width: 992px) {
+  /*** shared properties for all classes */
+  .col-lg-4 {
+    float: left;
+  }
+  /*** unique class properties ***/
+  .col-lg-4 {
+    width: 33.33%;
+  }
+}
+
+/*** Tablet ***/
+@media (min-width: 768px) and (max-width: 991px) {
+  /*** shared properties for all classes */
+  .col-md-6, .col-md-12 {
+    float: left;
+  }
+  /*** unique class properties ***/
+  .col-md-6 {
+    width: 50%;
+  }
+  .col-md-12 {
+    width: 100%;
+  }
+}
+
+/*** Mobile ***/
+@media (max-width: 767px) {
+  /*** shared properties for all classes */
+  .col-sm-12 {
+    float: left;
+  }
+  /*** unique class properties ***/
+  .col-sm-12 {
+    width: 100%;
+  }
+}
