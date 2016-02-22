@@ -9,9 +9,12 @@ h1 {
   text-align: center;
 }
 
-area {
+.area {
+  border: 1px dotted black; /* debug - show area border */
+  /*
   position: relative;
   float: left;  
+  */
 }
 
 section {
@@ -51,6 +54,10 @@ p {
   margin-right: 20px;
   margin-left: 20px;
   width: 95%;
+}
+
+.row {
+  width: 100%;
 }
 
 /*** Desktop **/
