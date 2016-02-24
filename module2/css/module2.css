@@ -1,59 +1,58 @@
 
 * {
-  box-sizing: border-box;
+  box-sizing: border-box; /* makes specs relative to outer border */
   font-family: Arial, Helvetica, sans-serif
 }
 
 h1 {
+  text-align: center; /* center text on page */
   font-size: 1.75em;
-  text-align: center;
 }
 
 .area {
-  border: 1px dotted black; /* debug - show area border */
-  /*
-  position: relative;
-  float: left;  
+  /* debug - show area border
+  border: 1px dotted black;
   */
 }
 
 section {
+  border: 1px solid black;
+  /* margins provide spacing between the border of this section
+     and the border of the surrounding area */
   background: #E9EAE9;
-  position: relative;
-  border: 1px solid black;
-  margin-left: 10px;
-  margin-right: 10px;
-  margin-top: 10px;
-  margin-bottom: 10px;
+  position: relative; /* required to host position absolute child titles */  
+  margin: 10px;       /* add spacing between grey box and neighbor */
 }
 
+
+/* h2 tags that are direct decendants of section tags */
 section > h2 {
+  border: 1px solid black; /* draw line around title box */
   font-size: 1.25em;
-  border: 1px solid black;
-  position: absolute;
-  top: 0;
-  margin-top: 0px;
-  right: 0;
-  width: 100px;
-  text-align: center;
+  text-align: center; /* center text within box */
+  width: 125px;       /* expand the title box beyond the characters */
+  position: absolute; /* take out of flow and pin to corner */
+  right: 0; /* put against right of relative container */
+  margin-top: 0px; /* remove inherited margin - makes align with section border */
 }
 
-#t1 {
+/* titles for each section required to have separate coloring */
+#t1 { /* section 1 title */
   background-color: #808080;  
 }
-#t2 {
+#t2 { /* section 2 title */
   background-color: #A52A2A;
+  color: #FFFFFF; /* text coloring */
 }
-#t3 {
+#t3 { /* section 3 title */
   background-color: #D2B48C;
 }
 
 p {
   font-size: 1em;
-  margin-top: 30px;
-  margin-right: 20px;
-  margin-left: 20px;
-  width: 95%;
+  padding: 10px;     /* adds spacing between text and box border line */
+  margin-top: 20px;  /* push down beyond title box - padding does not help this */
+  margin-bottom: 0px; /* removes unecessary space between bottom padding and section line */
 }
 
 .row {
@@ -62,9 +61,11 @@ p {
 
 /*** Desktop **/
 @media (min-width: 992px) {
+  /*** shared properties for all classes */
   .col-lg-4 {
     float: left;
   }
+  /*** unique class properties ***/
   .col-lg-4 {
     width: 33.33%;
   }
@@ -72,23 +73,26 @@ p {
 
 /*** Tablet ***/
 @media (min-width: 768px) and (max-width: 991px) {
+  /*** shared properties for all classes */
   .col-md-6, .col-md-12 {
     float: left;
   }
+  /*** unique class properties ***/
   .col-md-6 {
     width: 50%;
   }
   .col-md-12 {
     width: 100%;
   }
-
 }
 
 /*** Mobile ***/
 @media (max-width: 767px) {
+  /*** shared properties for all classes */
   .col-sm-12 {
     float: left;
   }
+  /*** unique class properties ***/
   .col-sm-12 {
     width: 100%;
   }
