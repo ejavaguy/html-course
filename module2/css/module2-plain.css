@@ -1,7 +1,7 @@
 
 * {
   box-sizing: border-box; /* makes specs relative to outer border */
-  font-family: Helvetica
+  font-family: Arial, Helvetica, sans-serif
 }
 
 h1 {
@@ -19,23 +19,21 @@ section {
   border: 1px solid black;
   /* margins provide spacing between the border of this section
      and the border of the surrounding area */
-  margin-left: 10px;   /* left spacing between section and div.area */
-  margin-right: 10px;  /* right spacing between section and div.area */
-  margin-top: 10px;    /* top spacing between top element and div.area */
-  margin-bottom: 10px; /* bottom spacing after bottom element and div.area */
   background: #E9EAE9;
   position: relative; /* required to host position absolute child titles */  
+  margin: 10px;       /* add spacing between grey box and neighbor */
 }
+
 
 /* h2 tags that are direct decendants of section tags */
 section > h2 {
   border: 1px solid black; /* draw line around title box */
-  text-align: center; /* center text within box */
   font-size: 1.25em;
+  text-align: center; /* center text within box */
   width: 125px;       /* expand the title box beyond the characters */
-  position: absolute; 
+  position: absolute; /* take out of flow and pin to corner */
   right: 0; /* put against right of relative container */
-  margin-top: 0px; /* remove inherited margin - makes alight with section border */
+  margin-top: 0px; /* remove inherited margin - makes align with section border */
 }
 
 /* titles for each section required to have separate coloring */
@@ -52,10 +50,9 @@ section > h2 {
 
 p {
   font-size: 1em;
-  margin-top: 30px;  /* push down beyond title box */
-  width: 95%;         /* causes line to take % of total space */
-  margin-left: auto;  /* right/left auto centers usable text block within % */
-  margin-right: auto;
+  padding: 10px;     /* adds spacing between text and box border line */
+  margin-top: 20px;  /* push down beyond title box - padding does not help this */
+  margin-bottom: 0px; /* removes unecessary space between bottom padding and section line */
 }
 
 .row {
