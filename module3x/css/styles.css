@@ -1,8 +1,12 @@
+* {
+  box-sizing: border-box; /* makes specs relative to outer border */
+  font-family: Arial, Helvetica, sans-serif
+}
+
 body {
   font-size: 16px;
   color: #000;
   background-color: #F5F4F4;
-  font-family: 'Oxygen', sans-serif;
 }
 
 #header-nav {
@@ -56,6 +60,7 @@ body {
   margin-bottom: 25px;
 }
 
+/*
 #main-section {
   padding-top: 0px;
   height: 1000px;
@@ -63,6 +68,7 @@ body {
   padding-right: 0px;
   background-color: #96C5DC;
 }
+*/
 
 #main-content {
 }
@@ -85,6 +91,7 @@ body {
 }
 #main-content div.menu-section a {
   /*text-align: center;*/
+  position: relative;
 }
 #main-content div.menu-section a:hover {
   text-decoration: none;
@@ -95,4 +102,10 @@ body {
   background-color: #C7C5C5;
   padding-left: 10px;    /* create a border within */
   padding-right: 10px;   /* the menu section box */
+  height: 700px;
+}
+.section-bottom {
+  position: absolute;
+  bottom: 10px;
+  right: 20px;
 }
