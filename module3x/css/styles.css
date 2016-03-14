@@ -1,0 +1,98 @@
+body {
+  font-size: 16px;
+  color: #000;
+  background-color: #F5F4F4;
+  font-family: 'Oxygen', sans-serif;
+}
+
+#header-nav {
+  background-color: #C7C5C5;
+  border-radius: 0;
+  border: 0; 
+  margin-bottom: 0px;
+}
+#header-nav .container {
+  margin: 0px 10px;
+  padding: 0px;
+}
+.navbar-brand {
+  .padding-top: 25px; 
+}
+.navbar-brand a:hover, .navbar-brand a:focus {
+  text-decoration: none;
+}
+.navbar-brand h1 { /* Food, LLC */
+  #font-family: 'Lora', serif;
+  color: #515254;
+  font-size: 1.5em;
+  font-weight: bold;
+  text-shadow: 1px 1px 1px #222;
+  margin-top: 0;
+  margin-bottom: 0;
+  line-height: .75;
+}
+#nav-list {
+  margin-top: 10px;  /* slide buttons down from top */
+  background: #909294;
+  text-align: center;
+  padding-bottom: 10px;
+}
+#nav-list a:hover {  /* highlight botton backgrounds */
+  background: #E7E7E7;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+#nav-list a span {
+  font-size: 1.4em;  
+  color: #000000;
+}
+
+.navbar-header button.navbar-toggle, .navbar-header .icon-bar {
+  border: 1px solid #61122f;
+}
+.navbar-header button.navbar-toggle {
+  clear: both;
+  margin-top: -40px;
+  margin-bottom: 25px;
+}
+
+#main-section {
+  padding-top: 0px;
+  height: 1000px;
+  padding-left: 0px;
+  padding-right: 0px;
+  background-color: #96C5DC;
+}
+
+#main-content {
+}
+#main-content h2 {
+  font-size: 1.6em;
+  color: #000000;
+  font-weight: bold;
+  margin-top: 0px;
+  padding-top: 10px;
+}
+#main-content  div.area {
+  padding-left: 0px;
+  padding-right: 0px;
+  margin: 0px 0px;
+}
+#main-content h3 {
+  font-size: 1.4em;
+  color: #000000;
+  font-weight: bold;
+}
+#main-content div.menu-section a {
+  /*text-align: center;*/
+}
+#main-content div.menu-section a:hover {
+  text-decoration: none;
+}
+#main-content div.menu-section {
+  text-align: left;
+  margin: 10px 10px;     /* creates blank border within area */
+  background-color: #C7C5C5;
+  padding-left: 10px;    /* create a border within */
+  padding-right: 10px;   /* the menu section box */
+}
